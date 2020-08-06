@@ -9,3 +9,9 @@ Create a 404 not found page following the design. The page should be responsive.
 ## User story
 
 I can see a page following the given design
+
+## Result
+
+[404 Not Found demo](https://404-not-found-plum.vercel.app/)
+
+![404 Not Found thumbnail](blob:https://vercel.com/b28a97cf-8868-42bf-9085-1d5161036090)
