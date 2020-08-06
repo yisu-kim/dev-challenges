@@ -14,4 +14,4 @@ I can see a page following the given design
 
 [404 Not Found demo](https://404-not-found-plum.vercel.app/)
 
-![404 Not Found thumbnail](blob:https://vercel.com/b28a97cf-8868-42bf-9085-1d5161036090)
+![404 Not Found thumbnail](./demo/demo%20thumbnail.png)
