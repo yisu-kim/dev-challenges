@@ -1,3 +1,7 @@
+:root {
+  --gray-color: #a9a9a9;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -6,4 +10,40 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.header__title {
+  font: bold 36px/48px "PT Serif";
+  letter-spacing: -0.045em;
+}
+
+.header__about > h2 {
+  font: 600 18px/27px "Poppins";
+  text-transform: uppercase;
+}
+
+/* max(MIN, min(VAL, MAX)) */
+.header__about > p {
+  font: max(14px, min(2.5vw, 18px)) / max(21px, min(2.5vw, 27px)) "Poppins";
+}
+
+.profile__photo {
+  height: max(209px, min(40vw, 341px));
+}
+
+.profile__name {
+  font: 600 max(14px, min(2.5vw, 18px)) / max(21px, min(2.5vw, 27px)) "Poppins";
+}
+
+.profile__job {
+  font: max(10px, min(1.5vw, 12px)) / max(13px, min(1.5vw, 16px)) "PT Serif";
+  text-transform: uppercase;
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.attribution > * {
+  font: 600 14px/17px "Montserrat";
+  color: var(--gray-color);
+  text-decoration: none;
 }
