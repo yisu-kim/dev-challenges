@@ -18,7 +18,13 @@ main {
   min-height: 100vh;
 }
 
+header,
+footer {
+  min-height: 50px;
+}
+
 header > h1 {
+  padding-left: 4%;
   color: var(--gray-color-1);
   font: bold 24px/25px Inconsolata;
 }
@@ -84,17 +90,12 @@ main {
 
 header,
 footer {
-  flex: 1 1 8%;
   display: flex;
   align-items: center;
 }
 
-header > h1 {
-  padding-left: 4%;
-}
-
 section {
-  flex: 5 1 80%;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
