@@ -44,7 +44,7 @@ main {
 .profile {
   width: max(150px, min(40vw, 260px));
   height: max(300px, min(80vw, 500px));
-  margin-right: 24px;
+  margin-right: 23px;
 }
 
 .profile__photo {
