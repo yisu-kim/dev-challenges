@@ -6,4 +6,5 @@ Each challenge is different and will test you different aspects of coding. It in
 
 ## Completed Challenges
 
-- [404 Not Found](https://404-not-found-plum.vercel.app/)
+- [404 Not Found](https://dev-challenges-delta.vercel.app/404-not-found/index.html)
+- [My team page](https://dev-challenges-delta.vercel.app/my-team-page/index.html)

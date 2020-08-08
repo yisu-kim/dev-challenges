@@ -12,6 +12,6 @@ I can see a page following the given design
 
 ## Result
 
-[404 Not Found demo](https://404-not-found-plum.vercel.app/)
+[demo](https://dev-challenges-delta.vercel.app/404-not-found/index.html)
 
-![404 Not Found thumbnail](./demo/demo%20thumbnail.png)
+![thumbnail](./demo/thumbnail.png)

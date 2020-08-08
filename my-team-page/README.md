@@ -9,3 +9,9 @@ Create my team page following the design. The page should be responsive. Don’t
 ## User story
 
 I can see a page following the given design
+
+## Result
+
+[demo](https://dev-challenges-delta.vercel.app/my-team-page/index.html)
+
+![thumbnail](./demo/thumbnail.png)
