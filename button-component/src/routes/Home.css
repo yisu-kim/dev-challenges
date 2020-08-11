@@ -1,0 +1,42 @@
+.Home {
+  box-sizing: border-box;
+  padding: 53px 0 0 83px;
+  display: flex;
+  flex-direction: column;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header > h1 {
+  font: 500 24px/36px Poppins, sans-serif;
+  color: #4f4f4f;
+}
+
+.container {
+  margin-top: 30px;
+  display: flex;
+}
+
+.item:not(:first-child) {
+  margin-left: 100px;
+}
+
+.item > p {
+  font: 12px/12px "Ubuntu Mono", monospace;
+  color: #333333;
+}
+
+footer {
+  margin-top: max(84.94px, min(22.651vw, 104px));
+  margin-bottom: max(12px, min(3.2vw, 240px));
+}
+
+.attribution > * {
+  font: 600 12px/15px "Montserrat";
+  color: #a9a9a9;
+  text-decoration: none;
+}
