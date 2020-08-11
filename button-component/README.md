@@ -18,3 +18,9 @@ Create a reusable button with all the states in the design and a page displaying
 - I can still access all button attributes
 - (optional) Show button in a similar way like the design or use Storybook. Otherwise, showing the button in multiple states is enough
 - Icon: https://google.github.io/material-design-icons/
+
+## Result
+
+[demo](https://dev-challenges-delta.vercel.app/button-component/build/index.html)
+
+![thumbnail](./demo/thumbnail.png)

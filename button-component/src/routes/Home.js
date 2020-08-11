@@ -88,7 +88,7 @@ function Home() {
       </section>
       <footer>
         <div class="attribution">
-          <a href="https://github.com/yisu-kim/dev-challenges/tree/master/my-team-page">
+          <a href="https://github.com/yisu-kim/dev-challenges/tree/master/button-component">
             yisu-kim
           </a>
           <span> @ </span>
