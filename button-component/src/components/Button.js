@@ -16,13 +16,15 @@ function Button({
     (disableShadow ? ` disableShadow` : "") +
     (size ? ` size--${size}` : " size--md") +
     (color ? ` color--${color}` : " color--default") +
-    (startIcon ? ` icon icon--startIcon` : "") +
-    (endIcon ? ` icon icon--endIcon` : "");
+    (startIcon || endIcon ? ` icon` : "");
+  const iconClassName =
+    (startIcon ? ` material-icons icon--startIcon` : "") +
+    (endIcon ? ` material-icons icon--endIcon` : "");
   return (
     <button className={className} disabled={disabled ? "disabled" : ""}>
-      {startIcon ? <i className="material-icons">{startIcon}</i> : ""}
+      {startIcon ? <i className={iconClassName}>{startIcon}</i> : ""}
       {innerText ? innerText : "Default"}
-      {endIcon ? <i className="material-icons">{endIcon}</i> : ""}
+      {endIcon ? <i className={iconClassName}>{endIcon}</i> : ""}
     </button>
   );
 }
