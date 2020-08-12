@@ -39,7 +39,7 @@ function Button({
 Button.propTypes = {
   disabled: PropTypes.bool,
   variant: PropTypes.oneOf(["outline", "text"]),
-  disableShadow: PropTypes.string,
+  disableShadow: PropTypes.bool,
   startIcon: PropTypes.string,
   endIcon: PropTypes.string,
   size: PropTypes.oneOf(["sm", "md", "lg"]).isRequired,
