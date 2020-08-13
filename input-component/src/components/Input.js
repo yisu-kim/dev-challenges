@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Input.css";
 
 function Input({
@@ -12,7 +13,6 @@ function Input({
   endIcon,
   size,
   fullWidth,
-  multiline,
   row,
   label,
 }) {
@@ -35,17 +35,17 @@ function Input({
 
   return (
     <div className="input-container">
-      {label && <label for="input">{label}</label>}
+      {label && <label for="text">{label}</label>}
       <div className="input-area">
         {startIcon && (
           <i className="material-icons icon--startIcon">{startIcon}</i>
         )}
-        {multiline && row ? (
-          <textarea id="input" {...props}>
+        {row ? (
+          <textarea id="text" {...props}>
             {value}
           </textarea>
         ) : (
-          <input id="input" type="text" {...props}></input>
+          <input id="text" type="text" {...props}></input>
         )}
         {endIcon && <i className="material-icons icon--endIcon">{endIcon}</i>}
       </div>
@@ -53,5 +53,25 @@ function Input({
     </div>
   );
 }
+
+Input.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  error: PropTypes.bool,
+  disabled: PropTypes.bool,
+  helperText: PropTypes.string,
+  startIcon: PropTypes.string,
+  endIcon: PropTypes.string,
+  size: PropTypes.string.isRequired,
+  fullWidth: PropTypes.bool,
+  row: PropTypes.string,
+  label: PropTypes.string,
+};
+
+Input.defaultProps = {
+  name: "text",
+  size: "md",
+};
 
 export default Input;
