@@ -16,36 +16,36 @@ function Input({
   row,
   label,
 }) {
-  const className = [
-    error && "error",
-    `size--${size}`,
-    fullWidth && "fullWidth",
-  ]
+  const inputClass = [`size--${size}`, fullWidth && "fullWidth"]
     .filter((e) => e)
     .join(" ");
 
-  const props = {
+  const inputProps = {
     name,
     placeholder,
     value,
-    className,
+    className: inputClass,
     disabled,
     rows: row,
   };
 
   return (
-    <div className="input-container">
+    <div
+      className={["input-container", error && "error", disabled && "disabled"]
+        .filter((e) => e)
+        .join(" ")}
+    >
       {label && <label for="text">{label}</label>}
       <div className="input-area">
         {startIcon && (
           <i className="material-icons icon--startIcon">{startIcon}</i>
         )}
         {row ? (
-          <textarea id="text" {...props}>
+          <textarea id="text" {...inputProps}>
             {value}
           </textarea>
         ) : (
-          <input id="text" type="text" {...props}></input>
+          <input id="text" type="text" {...inputProps}></input>
         )}
         {endIcon && <i className="material-icons icon--endIcon">{endIcon}</i>}
       </div>
