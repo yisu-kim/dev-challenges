@@ -6,10 +6,18 @@ class Input extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      value: this.props.value,
       isFocus: false,
     };
 
+    this.handleChange = this.handleChange.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      value: event.target.value,
+    });
   }
 
   handleFocus() {
@@ -22,7 +30,6 @@ class Input extends Component {
     const {
       name,
       placeholder,
-      value,
       error,
       disabled,
       helperText,
@@ -40,7 +47,7 @@ class Input extends Component {
     const inputProps = {
       name,
       placeholder,
-      value,
+      value: this.state.value,
       className: inputClass,
       disabled,
       rows: row,
@@ -66,16 +73,16 @@ class Input extends Component {
             <textarea
               id="text"
               {...inputProps}
+              onChange={this.handleChange}
               onFocus={this.handleFocus}
               onBlur={this.handleFocus}
-            >
-              {value}
-            </textarea>
+            ></textarea>
           ) : (
             <input
               id="text"
               type="text"
               {...inputProps}
+              onChange={this.handleChange}
               onFocus={this.handleFocus}
               onBlur={this.handleFocus}
             ></input>
