@@ -64,7 +64,7 @@ class Input extends Component {
           .filter((e) => e)
           .join(" ")}
       >
-        {label && <label for="text">{label}</label>}
+        {label && <label htmlFor="text">{label}</label>}
         <div className="input-area">
           {startIcon && (
             <i className="material-icons icon--startIcon">{startIcon}</i>
