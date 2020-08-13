@@ -23,6 +23,16 @@ function Input({
   ]
     .filter((e) => e)
     .join(" ");
+
+  const props = {
+    name,
+    placeholder,
+    value,
+    className,
+    disabled,
+    rows: row,
+  };
+
   return (
     <div className="input-container">
       {label ? <label for="input">{label}</label> : ""}
@@ -33,26 +43,11 @@ function Input({
           ""
         )}
         {multiline && row ? (
-          <textarea
-            name={name}
-            id="input"
-            placeholder={placeholder}
-            rows={row}
-            className={className}
-            disabled={disabled}
-          >
+          <textarea id="input" {...props}>
             {value}
           </textarea>
         ) : (
-          <input
-            type="text"
-            name={name}
-            id="input"
-            placeholder={placeholder}
-            value={value}
-            className={className}
-            disabled={disabled}
-          ></input>
+          <input id="input" type="text" {...props}></input>
         )}
         {endIcon ? (
           <i className="material-icons icon--endIcon">{endIcon}</i>
