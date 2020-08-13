@@ -17,9 +17,9 @@ function Input({
   label,
 }) {
   const className = [
-    error ? "error" : "",
+    error && "error",
     `size--${size}`,
-    fullWidth ? "fullWidth" : "",
+    fullWidth && "fullWidth",
   ]
     .filter((e) => e)
     .join(" ");
@@ -35,12 +35,10 @@ function Input({
 
   return (
     <div className="input-container">
-      {label ? <label for="input">{label}</label> : ""}
+      {label && <label for="input">{label}</label>}
       <div className="input-area">
-        {startIcon ? (
+        {startIcon && (
           <i className="material-icons icon--startIcon">{startIcon}</i>
-        ) : (
-          ""
         )}
         {multiline && row ? (
           <textarea id="input" {...props}>
@@ -49,13 +47,9 @@ function Input({
         ) : (
           <input id="input" type="text" {...props}></input>
         )}
-        {endIcon ? (
-          <i className="material-icons icon--endIcon">{endIcon}</i>
-        ) : (
-          ""
-        )}
+        {endIcon && <i className="material-icons icon--endIcon">{endIcon}</i>}
       </div>
-      {helperText ? <span className="helper-text">{helperText}</span> : ""}
+      {helperText && <span className="helper-text">{helperText}</span>}
     </div>
   );
 }
