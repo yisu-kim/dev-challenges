@@ -20,3 +20,9 @@ Create a reusable input with all the states in the design and a page displaying 
 - I can still access all input attribute
 - (optional) Show input in a similar way like the design or use Storybook. Otherwise, showing the input in multiple states is enough
 - Icon: https://google.github.io/material-design-icons/
+
+## Result
+
+[demo](https://dev-challenges-delta.vercel.app/input-component/build/index.html)
+
+![thumbnail](./demo/thumbnail.png)
