@@ -1,0 +1,16 @@
+:root {
+  --light-gray-color: #828282;
+  --error-color: #d32f2f;
+  --focus-color: #2962ff;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
