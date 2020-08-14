@@ -33,8 +33,8 @@ header {
 }
 
 footer {
-  margin-top: max(84.94px, min(22.651vw, 104px));
-  margin-bottom: max(12px, min(3.2vw, 240px));
+  margin-top: unquote("max(84.94px, min(22.651vw, 104px))");
+  margin-bottom: unquote("max(12px, min(3.2vw, 240px))");
 }
 
 .attribution > * {
