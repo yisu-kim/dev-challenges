@@ -1,0 +1,81 @@
+:root {
+  --light-gray-color: #828282;
+  --error-color: #d32f2f;
+  --focus-color: #2962ff;
+}
+
+.input-container {
+  label {
+    font: 400 12px/17px "Noto Sans JP", sans-serif;
+    color: #333333;
+  }
+  .input-area {
+    display: flex;
+    align-items: center;
+    min-width: 200px;
+    position: relative;
+    i {
+      &.material-icons {
+        color: var(--light-gray-color);
+      }
+      &.icon--startIcon {
+        position: absolute;
+        left: 12px;
+        ~ input[type="text"] {
+          padding-left: 45px;
+        }
+      }
+      &.icon--endIcon {
+        position: absolute;
+        right: 12px;
+      }
+    }
+    input[type="text"],
+    textarea {
+      width: 200px;
+      border: 1px solid var(--light-gray-color);
+      border-radius: 8px;
+      padding: 18px 12px;
+      font: 500 14px/20px "Noto Sans JP", sans-serif;
+      color: var(--light-gray-color);
+      &.fullWidth {
+        width: 100%;
+      }
+    }
+    input[type="text"] {
+      &.size--sm {
+        height: 40px;
+      }
+      &.size--md {
+        height: 56px;
+      }
+    }
+    textarea {
+      resize: none;
+    }
+  }
+  span {
+    font: 400 10px/14px "Noto Sans JP", sans-serif;
+    color: var(--light-gray-color);
+  }
+  &:not(.disabled).error {
+    label,
+    span {
+      color: var(--error-color);
+    }
+    input[type="text"],
+    textarea {
+      border-color: var(--error-color);
+    }
+  }
+  &:not(.disabled):not(.error).focus {
+    label,
+    span {
+      color: var(--focus-color);
+    }
+    input[type="text"],
+    textarea {
+      border-color: var(--focus-color);
+    }
+  }
+}

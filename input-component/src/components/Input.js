@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./Input.css";
+import styles from "./Input.module.scss";
 
 class Input extends Component {
   constructor(props) {
@@ -40,7 +40,11 @@ class Input extends Component {
       row,
       label,
     } = this.props;
-    const inputClass = [`size--${size}`, fullWidth && "fullWidth"]
+    const inputClass = [
+      size === "sm" && styles["size--sm"],
+      size === "md" && styles["size--md"],
+      fullWidth && styles.fullWidth,
+    ]
       .filter((e) => e)
       .join(" ");
 
@@ -56,18 +60,26 @@ class Input extends Component {
     return (
       <div
         className={[
-          "input-container",
-          error && "error",
-          disabled && "disabled",
-          this.state.isFocus && "focus",
+          styles["input-container"],
+          error && styles.error,
+          disabled && styles.disabled,
+          this.state.isFocus && styles.focus,
         ]
           .filter((e) => e)
           .join(" ")}
       >
         {label && <label htmlFor="text">{label}</label>}
-        <div className="input-area">
+        <div className={styles["input-area"]}>
           {startIcon && (
-            <i className="material-icons icon--startIcon">{startIcon}</i>
+            <i
+              className={[
+                "material-icons",
+                styles["material-icons"],
+                styles["icon--startIcon"],
+              ].join(" ")}
+            >
+              {startIcon}
+            </i>
           )}
           {row ? (
             <textarea
@@ -87,9 +99,21 @@ class Input extends Component {
               onBlur={this.handleFocus}
             ></input>
           )}
-          {endIcon && <i className="material-icons icon--endIcon">{endIcon}</i>}
+          {endIcon && (
+            <i
+              className={[
+                "material-icons",
+                styles["material-icons"],
+                styles["icon--endIcon"],
+              ].join(" ")}
+            >
+              {endIcon}
+            </i>
+          )}
         </div>
-        {helperText && <span className="helper-text">{helperText}</span>}
+        {helperText && (
+          <span className={styles["helper-text"]}>{helperText}</span>
+        )}
       </div>
     );
   }
